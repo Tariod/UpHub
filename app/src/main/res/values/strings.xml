@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">UpHub</string>
+
+    <!--Main activity-->
+    <string name="main_repos">Repositories</string>
+    <string name="main_users">Users</string>
+    <string name="main_profile">Profile</string>
+
+    <!--Repository-->
+    <string name="repository_is_fork">Is fork</string>
+    <string name="repository_is_private">Is private</string>
+
+    <!--Login-->
+    <string name="login_field_login">Login</string>
+    <string name="login_field_password">Password</string>
+    <string name="login_field_sign_up">Sign in</string>
+    <string name="login_field_sign_up_2fa">Two factor sign in</string>
+    <string name="login_2fa_code">2FA Code</string>
+    <string name="login_field_skip">Skip</string>
+    <string name="login_error_creds">Probably invalid field</string>
+
+    <!--Profile-->
+    <string name="profile_empty">You aren\'t authenticated</string>
+    <string name="profile_sign_in">Sign in</string>
+    <string name="profile_repos">Repositories (%s)</string>
+    <string name="profile_follow">Followers (%s)</string>
+    <string name="profile_subscr">Subscriptions (%s)</string>
+    <string name="profile_exit">Sign out</string>
+    <string name="profile_exit_confirm">Do you really want to sign out?</string>
+
+    <!--Explore-->
+    <string name="explore_branch">Branch</string>
+
+    <!--Common-->
+    <string name="common_error_smth_went_wrong">Something went wrong</string>
+    <string name="common_error_no_connection">No internet connection</string>
+    <string name="common_empty_list">Looks like it\'s empty(</string>
+    <string name="common_warning">Warning</string>
+    <string name="common_refresh">Refresh</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_ok">Ok</string>
+</resources>

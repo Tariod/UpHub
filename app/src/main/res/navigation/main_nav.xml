@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/repository">
+
+    <fragment
+        android:id="@+id/repository"
+        android:name="com.tariod.uphub.ui.main.repository.RepositoryFragment"
+        tools:layout="@layout/fragment_repository"
+        android:label="RepositoryFragment" />
+
+    <fragment
+        android:id="@+id/user"
+        android:name="com.tariod.uphub.ui.main.user.UserFragment"
+        tools:layout="@layout/fragment_user"
+        android:label="UserFragment">
+        <action
+            android:id="@+id/action_to_profile_view"
+            app:destination="@id/profile_view">
+            <argument
+                android:name="userId"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.tariod.uphub.ui.main.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_to_profile_view"
+            app:destination="@id/profile_view">
+            <argument
+                android:name="userId"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_view"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.tariod.uphub.ui.main.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_to_profile_view"
+            app:destination="@id/profile_view">
+            <argument
+                android:name="userId"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+
+</navigation>

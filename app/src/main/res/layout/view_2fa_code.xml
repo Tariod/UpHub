@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:background="@drawable/background_login_form"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fa_code"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultMargin"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:layout_marginEnd="@dimen/defaultMargin"
+            android:hint="@string/login_2fa_code"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/code"
+                style="@style/UpHubInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/UpHubPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/defaultMargin"
+            android:layout_marginBottom="@dimen/defaultMargin"
+            android:text="@string/login_field_sign_up" />
+
+    </LinearLayout>
+
+</FrameLayout>

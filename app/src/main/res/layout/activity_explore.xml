@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.tariod.uphub.ui.explore.ExploreViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="@dimen/defaultPadding">
+
+            <TextView
+                style="@style/UpHubPrimaryTextLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explore_branch" />
+
+            <Spinner
+                android:id="@+id/branches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultMargin"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <com.tariod.uphub.utilities.ui.view.DirectoryPathView
+            android:id="@+id/path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ellipsize="start"
+            android:padding="@dimen/defaultPadding"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="/linux/arch/arm/" />
+
+        <com.tariod.uphub.utilities.ui.view.ProgressLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:progress="@{viewModel.progress}">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+        </com.tariod.uphub.utilities.ui.view.ProgressLayout>
+
+
+    </LinearLayout>
+
+</layout>
